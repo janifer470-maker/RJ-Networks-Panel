@@ -1,0 +1,11 @@
+RJ Networks Panel Upgrade
+- ZIP mein app.py, templates, CSS aur requirements shamil hain.
+- Render Environment mein DATABASE_URL, SECRET_KEY, ADMIN_USER, ADMIN_PASSWORD set hon.
+- requirements.txt mein psycopg[binary] zaroor hai.
+- Is code ko deploy karne se pehle purane SQLite data ka CSV backup kar lein. SQLite data khud PostgreSQL mein migrate nahi hota.
+- Admin password ko Render Environment mein strong password se badlein.
+- CSV columns: name, phone, area, package, fee, expiry, notes. Expiry YYYY-MM-DD format.
+- CSV import 2000 rows tak.
+- Online proof PNG/JPG/WEBP/PDF.
+- Render Free local uploads persistent nahi hote. Screenshot files ko permanent rakhne ke liye persistent disk ya cloud storage chahiye.
+- WhatsApp button message prefill karta hai; Send user ko dabana hota hai. Automatic WhatsApp sending ke liye official WhatsApp Business API chahiye.

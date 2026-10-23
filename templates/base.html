@@ -1,0 +1,4 @@
+<!doctype html><html lang="ur"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RJ Networks Panel</title><link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"></head><body>
+<header><b>RJ <span>NETWORKS</span></b>{% if user %}<nav><a href="/">Dashboard</a><a href="/customers">Customers</a><a href="/payments">Payments</a>{% if user.role=='admin' %}<a href="/workers">Workers</a>{% endif %}<a href="/export">CSV Backup</a><a href="/logout">Logout</a></nav>{% endif %}</header><main>
+{% with ms=get_flashed_messages(with_categories=true) %}{% for cat,msg in ms %}<div class="flash {{cat}}">{{msg}}</div>{% endfor %}{% endwith %}
+{% block content %}{% endblock %}</main><footer>RJ Networks • Recovery Panel</footer></body></html>
